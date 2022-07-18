@@ -1,5 +1,5 @@
 body {
-    display: block;
+    // display: block;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -8,21 +8,23 @@ body {
     color: var(--main-text-color);
     background-color: var(--white-background-color);
 
+
 }
+
 
 
 ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    display: block;
+    // display: block;
 
 }
 
 li {
     padding: 0;
     margin: 0;
-    display: list-item;
+    // display: list-item;
 }
 
 .list {
@@ -44,6 +46,23 @@ li {
     padding-right: 15px;
 }
 
+// @media screen and (min-width: 480px) {
+//     .container {
+//         width: 480px;
+//     }
+// }
+
+// @media screen and (min-width: 768px) {
+//     .container {
+//         width: 768px;
+//     }
+// }
+
+// @media screen and (min-width: 1140px) {
+//     .container {
+//         width: 1140px;
+//     }
+// }
 
 .btn {
     border: 1px solid transparent;
