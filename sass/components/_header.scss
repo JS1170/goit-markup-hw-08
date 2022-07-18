@@ -1,119 +1,390 @@
 .header {
-        position: relative;
-        border-bottom: 1px solid $border-color;
+  position: relative;
+  border-bottom: 1px solid $border-color;
 
-        &__container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+      @media screen and (max-width: 767px) {
+      height: 60px;
+      }
 
-        @media screen and (max-width: 767px) {
-            height: 60px;
-        }
-      
-   
-        @media screen and (min-width: 768px) {
-            height: 80px;
-        }
+      @media screen and (min-width: 768px) {
+      height: 80px;
+      }
     }
+}
 
-  &__nav {
-    font-weight: 500;
-    font-style: normal;
-    transition: color 250ms $timing-function;
+// // Стилизация меню --------
+
+.menu-container {
+
+  background-color: $white-background-color;
 
 
+  // Телефон до 767 
+  @media screen and (max-width: 767px) {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 48px 40px;
+
+    overflow-y: scroll;
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-
   }
 
+  // ПК и планшет от 768 планшет
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Навигация - ссылки страницы 
+
+.nav-box {
+
+  // Телефон до 767 
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-grow: 1;
+    margin-bottom: 50px;
+  }
+}
 
 .nav-list {
-  display: flex;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 93px;
-  text-decoration: none;
-}
 
-.nav-list__item {
-  margin-right: 50px;
-  transition: color 250ms $timing-function;
-  cursor: pointer;
-
-  &__item:not(:last-child) {
-  margin-right: 50px;
+  // Для планшета от 768 до 1199 
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    margin-left: 88px;
   }
 
-  &_item:last-child {
-  margin-right: 0;
-  }
-}
-
-.header__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: $primary-text-color;
-  transition: color 250ms $timing-function;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
+  // Для десктопа от 1200
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 93px;
   }
 
-  &.active {
-    position: relative;
-    color: $accent-color;
+  &__item {
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      display: inline-block;
-      width: 100%;
-      height: 4px;
-      border-radius: 2px;
-      background-color: $accent-color;
+    // Телефон до 767  
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    // Планшет от 768 до 1199
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 50px;
+    }
+
+    // Только ПК от 1200 
+    @media screen and (min-width: 1200px) {
+      margin-right: 50px;
     }
   }
+
+
+
+  &__link {
+          display: block;
+          text-decoration: none;
+          font-weight: 500;
+          letter-spacing: 0.02em;
+          color: $primary-text-color;
+      
+          transition: color 250ms $timing-function;
+      
+      
+          //Телефон до 767
+          @media screen and (max-width: 767px) {
+            font-size: 40px;
+            line-height: 1.17;
+          }
+      
+          //ПК и планшет от 768
+          @media screen and (min-width: 768px) {
+            padding: 32px 0;
+      
+            font-size: 14px;
+            line-height: 1.14;
+          }
+      
+          //ПК от 1200
+          @media screen and (min-width: 1200px) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+      
+            font-size: 14px;
+            line-height: 1.14;
+      
+          }
+      
+          &:hover,
+          &:focus {
+            color: $accent-color;
+          }
+      
+        }
+      
+        // ------- nav-list__link active
+        &__link--accent {
+          position: relative;
+          color: $accent-color;
+      
+          &::after {
+      
+            //ПК и планшет от 768
+            @media screen and (min-width: 768px) {
+              content: '';
+      
+              position: absolute;
+              left: 0;
+              bottom: -1px;
+      
+              display: inline-block;
+              width: 100%;
+              height: 4px;
+      
+              border-radius: 2px;
+      
+              background-color: $accent-color;
+            }
+      
+            //ПК от 1200
+            @media screen and (min-width: 1200px) {}
+        }
+      }
 }
 
-/* Контакти */
 
-.header__contacts {
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-}
 
-.header__address {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: $main-text-color;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: color 250ms $timing-function;
+    
+.menu-btn {
+  position: relative;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-    & .header__icon {
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    transition: fill 250ms $timing-function;
+
+    &:hover,
+    &:focus {
       fill: $accent-color;
     }
   }
+
 }
 
-.header__icon {
-  margin-right: 10px;
+.menu-btn .icon-close {
+  display: none;
+}
+
+.menu-btn.is-open .icon-close {
+  display: block;
+}
+
+.menu-btn.is-open .icon-menu {
+  display: none;
+}
+
+.icon-close {
+  position: absolute;
+  z-index: 1;
+}
+
+
+
+
+
+
+/* Контакти */
+
+.contacts-list {
+  // display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  // margin-left: auto;
+
+    // Телефон до 767
+      @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 64px;
+      }
+    
+    
+      // ПК от 1200 
+      @media screen and (min-width: 1200px) {
+        display: flex;
+      }
+
+      &__item:not(:last-child) {
+        
+        
+        // Телефон до 767 
+        @media screen and (max-width: 767px) {
+                     margin-top: 32px;
+       }
+        
+       // Телефон и планшет от 768 до 1199 
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+          margin-bottom: 10px;
+        }
+        
+       //ПК от 1200
+       @media screen and (min-width: 1200px) {
+         margin-right: 30px;
+       }
+     }
+
+    &__link {
+           // display: flex;
+           align-items: center;
+           text-decoration: none;
+           color: $main-text-color;
+           fill: $main-text-color;
+           font-weight: 500;
+           font-size: 14px;
+           line-height: 1.14;
+           letter-spacing: 0.02em;
+           transition: color 250ms $timing-function;
+    
+    
+           &:hover,
+           &:focus {
+             color: $accent-color;
+    
+             & .contacts-list__icon {
+               fill: $accent-color;
+             }
+           }
+    
+           @media screen and (max-width: 767px) {
+             font-size: 24px;
+             line-height: 1.16;
+           }
+    
+           // Планешет и комп от 768 
+           @media screen and (min-width: 768px) {
+             display: flex;
+             align-items: center;
+           }
+        }
+
+        &__icon {
+                  margin-right: 10px;
+        
+                  //Телефон до 767
+                  @media screen and (max-width: 767px) {
+                    display: none;
+                  }
+          }
+        &__link--accent {
+          
+                      // до 767 только телефон 
+                      @media screen and (max-width: 767px) {
+                        font-size: 34px;
+                        line-height: 1.17;
+                        color: $accent-color;
+                      }
+}
+}
+
+
+
+
+
+// Социальные сети ---------------------
+
+
+.social-list {
+
+
+  //ПК и плнаште от 768
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+
+  //Телефон до 767
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+
+
+  &__item:not(:last-child) {
+
+    //Телефон до 767 
+    @media screen and (max-width: 767px) {
+
+      // margin-right: 10px;
+      padding-right: 10px;
+
+      border-right: 1px solid $modal-color;
+    }
+  }
+
+  &__link {
+
+    //до 767 только телефон 
+    @media screen and (max-width: 767px) {
+      color: $accent-color;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      text-decoration: none;
+    }
+  }
 }

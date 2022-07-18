@@ -16,47 +16,67 @@
 </head>
 <body>
 
-
 <!-- Header -->
 <header class="header">
     <div class="header__container container">
         <a href="./index.html" class="logo">Web<span class="logo__header">Studio</span></a>
-        <nav class="header__nav">
+        <div class="menu-container" id="menu-container" data-menu>
+        <nav class="nav-box">
             <ul class="nav-list list">
-                <li class="nav-list__item"><a href="./index.html" class="header__link active">Студия</a></li>
-                <li class="nav-list__item"><a href="./portfolio.html" class="header__link">Портфолио</a></li>
-                <li class="nav-list__item"><a href="" class="header__link">Контакты</a></li>
+                <li class="nav-list__item"><a href="./index.html" class="nav-list__link nav-list__link--accent">Студия</a></li>
+                <li class="nav-list__item"><a href="./portfolio.html" class="nav-list__link">Портфолио</a></li>
+                <li class="nav-list__item"><a href="" class="nav-list__link">Контакты</a></li>
             </ul>
         </nav>
-            <ul class="header__contacts list">
-                <li class="nav-list__item">
-                    <a href="mailto:info@devstudio.com" class="header__address">
-                        <svg class="header__icon" width="16px" height="12px">
+            <ul class="contacts-list list">
+                <li class="contacts-list__item">
+                    <a href="mailto:info@devstudio.com" class="contacts-list__link">
+                        <svg class="contacts-list__icon" width="16px" height="12px">
                          <use href="./images/symbol-defs.svg#icon-envelope-hover"></use>
                         </svg>info@devstudio.com</a>
                 </li>
-                <li class="nav-list__item">
-                    <a href="tel:+380961111111" class="header__address">
-                        <svg class="header__icon" width="16px" height="12px">
+                <li class="contacts-list__item">
+                    <a href="tel:+380961111111" class="contacts-list__link contacts-list__link--accent">
+                        <svg class="contacts-list__icon" width="16px" height="12px">
                             <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                         </svg>+38 096 111 11 11</a>
                 </li>
             </ul>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a href="" class="social-list__link">Instagram</a>
+                </li>
+                <li class="social-list__item">
+                    <a href="" class="social-list__link">Twitter</a>
+                </li>
+                <li class="social-list__item">
+                    <a href="" class="social-list__link">Facebook</a>
+                </li>
+                <li class="social-list__item">
+                    <a href="" class="social-list__link">LinkedIn</a>
+                </li>
+            </ul>
+            </div>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                <svg class="" width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-close" href="./images/symbol-defs.svg#icon-close_40px"></use>
+                    <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu_40px"></use>
+                </svg>
+            </button>
+        
     </div>
 </header>
 
-<!-- <main>
-
+<main>
 
 <!-- Hero -->
-
-    <!-- <section class="hero">
+<section class="hero">
                 <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-                <button data-modal-open type="button" class="btn">Заказать услугу</button> -->
+                <button data-modal-open type="button" class="btn">Заказать услугу</button>
 
-<!--Модальний блок-->
+<!-- Модальний блок-->
                 
-                <!-- <div class="modal__backdrop is-hidden" data-modal>
+                <div class="modal__backdrop is-hidden" data-modal>
                     <div class="modal__block">
                         <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним
                         </h2>
@@ -104,12 +124,11 @@
                         </form>
                 </div>
                 </div>
-    </section>   -->
+    </section>  
 
 
-
-<!-- Внимание к деталям
-<section class="benefits">
+<!-- блок "Внимание к деталям" -->
+<!-- <section class="benefits">
     <div class="container">
             <h2 class="benefits__heading visually-hidden">Премущества компании</h2>
             <ul class="benefits__list list">
@@ -390,8 +409,9 @@
 </section> -->
 </main>
 
-<!-- підвал сторінки -->
+<!-- Футер -->
 <!-- <footer class="footer">
+    
     <div class="footer__block container">
         <div class="footer__contacts">
             <a href="./index.html" class="logo">Web<span class="logo__footer">Studio</span></a>
@@ -459,6 +479,7 @@
         </div>
     </div>
 </footer> -->
+<script src="./js/menu.js"></script>
 <script src="./js/modal.js"></script>
 </body>
 </html>

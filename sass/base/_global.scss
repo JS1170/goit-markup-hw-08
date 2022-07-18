@@ -8,7 +8,10 @@ body {
     color: var(--main-text-color);
     background-color: var(--white-background-color);
 
+}
 
+body.modal-open {
+    overflow: hidden;
 }
 
 
@@ -34,8 +37,19 @@ li {
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+
+    // Телефон и планшет до 1199
+        @media screen and (max-width: 1199px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    
+    
+        // Только ПК от 1200
+        @media screen and (min-width: 1200px) {
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
 }
 
 .container {
@@ -46,23 +60,23 @@ li {
     padding-right: 15px;
 }
 
-// @media screen and (min-width: 480px) {
-//     .container {
-//         width: 480px;
-//     }
-// }
+@media screen and (min-width: 480px) {
+    .container {
+        width: 480px;
+    }
+}
 
-// @media screen and (min-width: 768px) {
-//     .container {
-//         width: 768px;
-//     }
-// }
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+}
 
-// @media screen and (min-width: 1140px) {
-//     .container {
-//         width: 1140px;
-//     }
-// }
+@media screen and (min-width: 1140px) {
+    .container {
+        width: 1140px;
+    }
+}
 
 .btn {
     border: 1px solid transparent;
