@@ -118,19 +118,19 @@
 
 .address-block {
 
-    // до 767 только телефон
+    // Телефон до 767
     @media screen and (max-width: 767px) {
         margin-bottom: 60px;
     }
 
 
-    // от 768 до 1199 только планшет
+    // Планшет от 768 до 1199
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         margin-left: 76px;
     }
 
 
-    // от 1200 только пк
+    // ПК от 1200
     @media screen and (min-width: 1200px) {
         margin-right: 75px;
     }
