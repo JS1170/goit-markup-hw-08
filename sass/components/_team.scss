@@ -1,115 +1,110 @@
 .team {
-    @extend .section;
-    background-color: $secondary-background-color;
+  @extend .section;
+  background-color: $secondary-background-color;
 
-    &__heading {
-        text-align: center;
-        margin-top: 0;
-        color: $primary-text-color;
+  &__heading {
+    text-align: center;
+    margin-top: 0;
+    color: $primary-text-color;
 
-        @media screen and (max-width: 1199px) {
-            margin-bottom: 30px;
-            font-size: 28px;
-            line-height: 1.18;
-
-        }
-
-        @media screen and (min-width: 1200px) {
-
-            margin-bottom: 50px;
-
-            font-size: 36px;
-            line-height: 1.16;
-        }
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+      font-size: 28px;
+      line-height: 1.18;
     }
 
-    &__list {
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
 
-        @media screen and (min-width: 768px) {
-                display: flex;
-                flex-wrap: wrap;
-                margin: -15px;
-            }
+      font-size: 36px;
+      line-height: 1.16;
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+  }
+
+  &__members:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__members {
+    background-color: $white-background-color;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+      0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: calc((100% - 60px) / 2);
+      margin: 15px;
     }
 
-    &__members:not(:last-child) {
-        @media screen and (max-width: 767px) {
-                margin-bottom: 30px;
-            }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 120px) / 4);
+      margin: 15px;
     }
+  }
 
-    &__members {
-        background-color: $white-background-color;
-        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
-        border-radius: 0px 0px 4px 4px;
+  &__block {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
-                width: calc((100% - 60px) / 2);
-                margin: 15px;
-            }
-        
-            @media screen and (min-width: 1200px) {
-                width: calc((100% - 120px) / 4);
-                margin: 15px;
-            }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    color: $primary-text-color;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    color: $main-text-color;
+    margin-bottom: 16px;
+  }
+
+  &__socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+  }
+
+  &__icons:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: $icon-color;
+    transition: background-color 250ms $timing-function,
+      fill 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      fill: $white-background-color;
+      background-color: $accent-color;
     }
-
-    &__block {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
-    &__title {
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.18;
-        text-align: center;
-        color: $primary-text-color;
-    }
-
-    &__text {
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 16px;
-        line-height: 1.18;
-        text-align: center;
-        color: $main-text-color;
-        margin-bottom: 16px;
-    }
-
-    &__socials {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        margin: auto;
-    }
-
-    &__icons:not(:last-child) {
-        margin-right: 10px;
-    }
-
-    &__logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        fill: $icon-color;
-        transition: background-color 250ms $timing-function, fill 250ms $timing-function;
-
-        &:hover,
-        &:focus {
-            fill: $white-background-color;
-            background-color: $accent-color;
-        }
-
-
-    }
-
-
+  }
 }

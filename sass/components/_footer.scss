@@ -1,100 +1,84 @@
-/* Footer style */
-
-
 .footer {
-    padding-bottom: 60px;
-    padding-top: 60px;
-    background-color: $footer-background-color;
-    
-    
-    &__block {
-            // до 1199 телефон и планшет
-            @media screen and (max-width: 1199px) {
-                    text-align: center;
-                }
-            
-            
-                // от 1200 только пк
-            @media screen and (min-width: 1200px) {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: baseline;
-                }
+  padding-bottom: 60px;
+  padding-top: 60px;
+  background-color: $footer-background-color;
+
+  &__block {
+    @media screen and (max-width: 1199px) {
+      text-align: center;
     }
 
-    &__contacts {
-                // от 768 планшет и комп
-                @media screen and (min-width: 768px) {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: baseline;
-        
-                }
-        
-                // от 768 до 1199 только планшет
-                @media screen and (min-width: 768px) and (max-width: 1199px) {
-        
-                    margin-bottom: 60px;
-                }
-            }
-    
-    &__items:not(:last-child) {
-        margin-bottom: 9px;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
 
+  &__contacts {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
     }
 
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 60px;
+    }
+  }
 
-    &__address {
+  &__items:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__address {
     font-style: normal;
     text-decoration: none;
     color: $white-text-color;
-    }
+  }
 
-    &__point {
+  &__point {
     font-style: normal;
     text-decoration: none;
     color: $secondary-link-color;
+  }
+
+  /* Блок социальных сетей */
+
+  &__socials {
+    
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
     }
 
-/* Блок социальных сетей */
-
-    &__socials {
-        // до 767 только телефон
-        @media screen and (max-width: 767px) {
-            margin-bottom: 60px;
-        }
     
-    
-        // от 768 до 1199 только планшет
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
-            margin-right: 89px;
-        }
-
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 89px;
     }
+  }
 
-    &__heading {
+  &__heading {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 1;
     text-transform: uppercase;
     color: $white-text-color;
-    }
+  }
 
-    &__box {
+  &__box {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
-    }
+  }
 
-
-    &__icons:not(:last-child) {
+  &__icons:not(:last-child) {
     margin-right: 10px;
-    }
+  }
 
-    &__logo {
+  &__logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,45 +91,40 @@
     background-color: rgba(255, 255, 255, 0.1);
     transition: background-color 250ms $timing-function;
 
-    &:hover, 
+    &:hover,
     &:focus {
-        fill: $white-text-color;
-        background-color: $accent-color;
-        }
+      fill: $white-text-color;
+      background-color: $accent-color;
     }
-
+  }
 }
 
 .address-block {
 
-    // Телефон до 767
-    @media screen and (max-width: 767px) {
-        margin-bottom: 60px;
-    }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 
 
-    // Планшет от 768 до 1199
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        margin-left: 76px;
-    }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 76px;
+  }
 
-
-    // ПК от 1200
-    @media screen and (min-width: 1200px) {
-        margin-right: 75px;
-    }
+  @media screen and (min-width: 1200px) {
+    margin-right: 75px;
+  }
 }
 
 /* Ссылки блока footer */
 
 .footer a {
-    text-decoration: none;
-    list-style: none;
-    cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
 
-    &:hover,
-    &:focus {
-        color: $accent-color;
-        cursor: pointer;
-        }
-    }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    cursor: pointer;
+  }
+}
