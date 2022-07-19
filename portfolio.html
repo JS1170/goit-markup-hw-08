@@ -9,7 +9,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
@@ -308,62 +307,65 @@
 
     <!-- підвал сторінки -->
 <footer class="footer">
+
   <div class="footer__block container">
     <div class="footer__contacts">
-      <a href="./index.html" class="logo">Web<span class="logo__footer">Studio</span></a>
-      <address>
-        <ul class="footer__items list">
-          <li class="footer__items">
-            <a href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=ru"
-              target="_blank" rel="noopener noreferrer" class="footer__address">г. Киев, пр-т Леси
-              Украинки, 26</a>
+      <div class="address-block">
+        <a href="./index.html" class="logo">Web<span class="logo__footer">Studio</span></a>
+        <address>
+          <ul class="footer__list list">
+            <li class="footer__items">
+              <a href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=ru"
+                target="_blank" rel="noopener noreferrer" class="footer__address">г. Киев, пр-т Леси
+                Украинки, 26</a>
+            </li>
+            <li class="footer__items">
+              <a lang="en" href="mailto:info@example.com" class="footer__point">info@example.com</a>
+            </li>
+            <li class="footer__items">
+              <a lang="en" href="tel:+380991111111" class="footer__point">+38 099 111 11 11</a>
+            </li>
+          </ul>
+        </address>
+      </div>
+      <div class="footer__socials">
+        <h3 class="footer__heading">Присоединяйтесь</h3>
+        <ul class="footer__box list">
+          <li class="footer__icons">
+            <a class="footer__logo" href="">
+              <svg class="footer__svg" width="20px" height="20px">
+                <use href="./images/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
           </li>
-          <li class="footer__items">
-            <a lang="en" href="mailto:info@example.com" class="footer__point">info@example.com</a>
+          <li class="footer__icons">
+            <a class="footer__logo" href="">
+              <svg width="20px" height="20px">
+                <use href="./images/symbol-defs.svg#icon-twitter"></use>
+              </svg>
+            </a>
           </li>
-          <li class="footer__items">
-            <a lang="en" href="tel:+380991111111" class="footer__point">+38 099 111 11 11</a>
+          <li class="footer__icons">
+            <a class="footer__logo" href="">
+              <svg width="20px" height="20px">
+                <use href="./images/symbol-defs.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__icons">
+            <a class="footer__logo" href="">
+              <svg width="20px" height="20px">
+                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-      </address>
-    </div>
-    <div class="footer__socials">
-      <h3 class="footer__heading">Присоединяйтесь</h3>
-      <ul class="footer__box list">
-        <li class="footer__icons">
-          <a class="footer__logo" href="">
-            <svg class="footer__svg" width="20px" height="20px">
-              <use href="./images/symbol-defs.svg#icon-instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer__icons">
-          <a class="footer__logo" href="">
-            <svg width="20px" height="20px">
-              <use href="./images/symbol-defs.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer__icons">
-          <a class="footer__logo" href="">
-            <svg width="20px" height="20px">
-              <use href="./images/symbol-defs.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer__icons">
-          <a class="footer__logo" href="">
-            <svg width="20px" height="20px">
-              <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      </div>
     </div>
     <div class="subscribe">
       <h3 class="subscribe__heading">Подпишитесь на рассылку</h3>
       <form class="subscribe__form">
-        <label>
+        <label class="subscribe__label">
           <input class="subscribe__field" type="email" name="email" placeholder="E-mail">
         </label>
         <button class="btn subscribe__btn" type="submit">Подписаться
@@ -373,6 +375,7 @@
         </button>
       </form>
     </div>
+
   </div>
 </footer>
 
