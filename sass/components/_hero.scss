@@ -8,7 +8,7 @@
         background-image: linear-gradient(to right,
                         rgba(47, 48, 58, 0.4),
                         rgba(47, 48, 58, 0.4)),
-                url('../images/bgimg.jpg');
+                url('../images/hero.jpeg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -19,7 +19,7 @@
                 background-image: linear-gradient(to right,
                                 rgba(47, 48, 58, 0.4),
                                 rgba(47, 48, 58, 0.4)),
-                        url('../images/imgadapt/hero-mob.jpg');
+                        url('../images/hero.jpeg');
 
                 @media (min-device-pixel-ratio: 2),
                 (-webkit-min-device-pixel-ratio: 2),
@@ -28,7 +28,7 @@
                         background-image: linear-gradient(to right,
                                         rgba(47, 48, 58, 0.4),
                                         rgba(47, 48, 58, 0.4)),
-                                url('../images/imgadapt/hero-mob@2x.jpg');
+                                url('../images/hero.jpeg');
                 }
         }
 
@@ -38,7 +38,7 @@
                 background-image: linear-gradient(to right,
                                 rgba(47, 48, 58, 0.4),
                                 rgba(47, 48, 58, 0.4)),
-                        url('../images/imgadapt/hero-tablet.jpg');
+                        url('../images/hero.jpeg');
 
                 @media (min-device-pixel-ratio: 2),
                 (-webkit-min-device-pixel-ratio: 2),
@@ -47,7 +47,7 @@
                         background-image: linear-gradient(to right,
                                         rgba(47, 48, 58, 0.4),
                                         rgba(47, 48, 58, 0.4)),
-                                url('../images/imgadapt/hero-tablet@2x.jpg');
+                                url('../images/hero.jpeg');
                 }
         }
 
@@ -66,7 +66,7 @@
                 background-image: linear-gradient(to right,
                                 rgba(47, 48, 58, 0.4),
                                 rgba(47, 48, 58, 0.4)),
-                        url('../images/imgadapt/hero-pc.jpg');
+                        url('../images/hero.jpeg');
 
                 @media (min-device-pixel-ratio: 2),
                 (-webkit-min-device-pixel-ratio: 2),
@@ -75,7 +75,7 @@
                         background-image: linear-gradient(to right,
                                         rgba(47, 48, 58, 0.4),
                                         rgba(47, 48, 58, 0.4)),
-                                url('../images/imgadapt/hero-pc@2x.jpg');
+                                url('../images/hero.jpeg');
                 }
         }
 

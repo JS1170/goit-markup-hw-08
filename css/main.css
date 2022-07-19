@@ -693,7 +693,7 @@ li {
   margin-right: auto;
   text-align: center;
   background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bgimg.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -701,23 +701,23 @@ li {
 @media screen and (max-width: 767px) {
   .hero {
     max-width: 480px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/imgadapt/hero-mob.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpeg");
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/imgadapt/hero-mob@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpeg");
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
     max-width: 768px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/imgadapt/hero-tablet.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpeg");
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/imgadapt/hero-tablet@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpeg");
   }
 }
 @media screen and (max-width: 1199px) {
@@ -733,12 +733,12 @@ li {
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/imgadapt/hero-pc.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpeg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/imgadapt/hero-pc@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpeg");
   }
 }
 .hero__title {
@@ -985,9 +985,10 @@ li {
   margin-bottom: 20px;
 }
 
-.benefits {
-  padding-top: 94px;
-  padding-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .benefits {
+    padding-bottom: 0;
+  }
 }
 .benefits__heading {
   margin-top: 0;
@@ -998,23 +999,40 @@ li {
   color: #212121;
 }
 .benefits__list {
-  display: flex;
   margin-top: 0;
   margin-bottom: 0;
 }
-.benefits__item {
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .benefits__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
-.benefits__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .benefits__item {
+    width: calc((100% - 120px) / 4);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .benefits__item {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .benefits__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 .benefits__box {
+  width: 100%;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  width: 270px;
-  height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
 }
@@ -1030,6 +1048,11 @@ li {
   line-height: 1.14;
   text-transform: uppercase;
   color: #212121;
+}
+@media screen and (max-width: 767px) {
+  .benefits__title {
+    text-align: center;
+  }
 }
 .benefits__text {
   font-size: 14px;
@@ -1084,22 +1107,50 @@ li {
 .team__heading {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.16;
   color: #212121;
 }
-.team__list {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (max-width: 1199px) {
+  .team__heading {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.18;
+  }
 }
-.team__members:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .team__heading {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .team__members:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 .team__members {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__members {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__members {
+    width: calc((100% - 120px) / 4);
+    margin: 15px;
+  }
 }
 .team__block {
   padding-top: 30px;
@@ -1150,28 +1201,53 @@ li {
 }
 
 /* Постоянные клиенты */
-.clients {
-  display: block;
-}
 .clients__heading {
   text-align: center;
   margin-top: 0;
-  font-size: 36px;
-  line-height: 1.16;
   color: #212121;
-  margin-bottom: 50px;
+}
+@media screen and (max-width: 1199px) {
+  .clients__heading {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.17;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__heading {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 .clients__list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  margin: -15px;
 }
-.clients__box:not(:last-child) {
+@media screen and (max-width: 767px) {
+  .clients__box {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients__box {
+    width: calc((100% - 90px) / 3);
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__box {
+    width: calc((100% - 180px) / 6);
+    margin: 15px;
+  }
+}
+.clients__box__box:not(:last-child) {
   margin-right: 30px;
 }
 .clients__link {
   display: flex;
-  width: 170px;
   height: 92px;
   justify-content: center;
   align-items: center;
@@ -1191,15 +1267,33 @@ li {
 /* Footer style */
 .footer {
   padding-bottom: 60px;
+  padding-top: 60px;
   background-color: #2f303a;
   /* Блок социальных сетей */
 }
-.footer__block {
-  display: flex;
+@media screen and (max-width: 1199px) {
+  .footer__block {
+    text-align: center;
+  }
 }
-.footer__contacts {
-  margin-right: 70px;
-  padding-top: 60px;
+@media screen and (min-width: 1200px) {
+  .footer__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__contacts {
+    margin-bottom: 60px;
+  }
 }
 .footer__items:not(:last-child) {
   margin-bottom: 9px;
@@ -1214,9 +1308,15 @@ li {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
 }
-.footer__socials {
-  padding-top: 72px;
-  margin-right: 93px;
+@media screen and (max-width: 767px) {
+  .footer__socials {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__socials {
+    margin-right: 89px;
+  }
 }
 .footer__heading {
   margin-top: 0;
@@ -1254,6 +1354,22 @@ li {
   background-color: #2196F3;
 }
 
+@media screen and (max-width: 767px) {
+  .address-block {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address-block {
+    margin-left: 76px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .address-block {
+    margin-right: 75px;
+  }
+}
+
 /* Ссылки блока footer */
 .footer a {
   text-decoration: none;
@@ -1266,8 +1382,10 @@ li {
 }
 
 /* Блок "Подпишитесь на рассылку" */
-.subscribe {
-  padding-top: 72px;
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    display: flex;
+  }
 }
 .subscribe__heading {
   margin-top: 0;
@@ -1277,12 +1395,19 @@ li {
   text-transform: uppercase;
   color: #ffffff;
 }
-.subscribe__form {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .subscribe__form {
+    display: flex;
+  }
+}
+@media screen and (max-width: 767px) {
+  .subscribe__label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .subscribe__field {
-  display: flex;
-  width: 358px;
   height: 50px;
   padding: 15px 16px;
   outline: none;
@@ -1296,12 +1421,36 @@ li {
   color: #757575;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .subscribe__field {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .subscribe__field {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__field {
+    margin-right: 12px;
+    width: 358px;
+  }
+}
 .subscribe__btn {
   display: flex;
   margin-left: 12px;
   height: 50px;
   padding: 10px 29px;
   align-items: center;
+  min-width: 200px;
+}
+@media screen and (max-width: 1199px) {
+  .subscribe__btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
 }
 
 .btn-svg {

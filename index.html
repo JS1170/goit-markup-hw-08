@@ -128,7 +128,7 @@
 
 
 <!-- блок "Внимание к деталям" -->
-<!-- <section class="benefits">
+<section class="benefits section">
     <div class="container">
             <h2 class="benefits__heading visually-hidden">Премущества компании</h2>
             <ul class="benefits__list list">
@@ -170,7 +170,7 @@
                 </li>
             </ul>
     </div>
-</section> -->
+</section>
 
 <!-- блок "Чем мы занимаемся" -->
 <!-- <section class="works">
@@ -192,12 +192,12 @@
 
 
 <!-- блок "наша команда" -->
-<!-- <section class="team">
+<section class="team">
         <div class="container"> 
         <h2 class="team__heading">Наша команда</h2>
         <ul class="team__list list">
             <li class="team__members" >
-            <img src="./images/igor.jpg" alt="фото Игорь Демьяненко" height="260" width="270"/>
+            <img srcset="./images/Mobile/img@3x.jpg 3x, ./images/Mobile/img@2x.jpg 2x, ./images/Mobile/img.jpg" src="./images/Mobile/img.jpg" alt="фото Игорь Демьяненко" width="270"/>
             <div class="team__block">
                         <h3 class="team__title">Игорь Демьяненко</h3>
                         <p class="team__text">Product Designer</p>
@@ -354,10 +354,10 @@
                 </li>
         </ul>
         </div>
-</section> -->
+</section>
 
 <!-- блок "Постоянные клиенты"-->
-<!-- <section class="clients">
+<section class="clients">
     <div class="container">
         <h2 class="clients__heading">Постоянные клиенты</h2>
         <ul class="clients__list list">
@@ -406,32 +406,33 @@
         </ul>
         </div>
     </div>
-</section> -->
+</section>
 </main>
 
 <!-- Футер -->
-<!-- <footer class="footer">
+<footer class="footer">
     
     <div class="footer__block container">
         <div class="footer__contacts">
-            <a href="./index.html" class="logo">Web<span class="logo__footer">Studio</span></a>
-            <address>
-                <ul class="footer__list list">
-                    <li class="footer__items">
-                        <a href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=ru"
-                            target="_blank" rel="noopener noreferrer" class="footer__address">г. Киев, пр-т Леси
-                            Украинки, 26</a>
-                    </li>
-                    <li class="footer__items">
-                        <a lang="en" href="mailto:info@example.com" class="footer__point">info@example.com</a>
-                    </li>
-                    <li class="footer__items">
-                        <a lang="en" href="tel:+380991111111" class="footer__point">+38 099 111 11 11</a>
-                    </li>
-                </ul>
-            </address>
-        </div>
-        <div class="footer__socials">
+            <div class="address-block">
+                <a href="./index.html" class="logo">Web<span class="logo__footer">Studio</span></a>
+                <address>
+                    <ul class="footer__list list">
+                        <li class="footer__items">
+                            <a href="https://www.google.com.ua/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5361971,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858?hl=ru"
+                                target="_blank" rel="noopener noreferrer" class="footer__address">г. Киев, пр-т Леси
+                                Украинки, 26</a>
+                        </li>
+                        <li class="footer__items">
+                            <a lang="en" href="mailto:info@example.com" class="footer__point">info@example.com</a>
+                        </li>
+                        <li class="footer__items">
+                            <a lang="en" href="tel:+380991111111" class="footer__point">+38 099 111 11 11</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+            <div class="footer__socials">
             <h3 class="footer__heading">Присоединяйтесь</h3>
             <ul class="footer__box list">
                 <li class="footer__icons">
@@ -463,11 +464,12 @@
                     </a>
                 </li>
             </ul>
+            </div>
         </div>
         <div class="subscribe">
             <h3 class="subscribe__heading">Подпишитесь на рассылку</h3>
             <form class="subscribe__form">
-                <label>
+                <label class="subscribe__label">
                     <input class="subscribe__field" type="email" name="email" placeholder="E-mail">
                 </label>
                 <button class="btn subscribe__btn" type="submit">Подписаться
@@ -477,8 +479,9 @@
                 </button>
             </form>
         </div>
+        
     </div>
-</footer> -->
+</footer>
 <script src="./js/menu.js"></script>
 <script src="./js/modal.js"></script>
 </body>

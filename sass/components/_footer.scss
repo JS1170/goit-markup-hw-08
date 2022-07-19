@@ -3,20 +3,43 @@
 
 .footer {
     padding-bottom: 60px;
+    padding-top: 60px;
     background-color: $footer-background-color;
     
     
     &__block {
-    display: flex;
+            // до 1199 телефон и планшет
+            @media screen and (max-width: 1199px) {
+                    text-align: center;
+                }
+            
+            
+                // от 1200 только пк
+            @media screen and (min-width: 1200px) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                }
     }
 
     &__contacts {
-    margin-right: 70px;
-    padding-top: 60px;
-    }
+                // от 768 планшет и комп
+                @media screen and (min-width: 768px) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+        
+                }
+        
+                // от 768 до 1199 только планшет
+                @media screen and (min-width: 768px) and (max-width: 1199px) {
+        
+                    margin-bottom: 60px;
+                }
+            }
     
     &__items:not(:last-child) {
-    margin-bottom: 9px;
+        margin-bottom: 9px;
 
     }
 
@@ -36,8 +59,17 @@
 /* Блок социальных сетей */
 
     &__socials {
-    padding-top: 72px;
-    margin-right: 93px;
+        // до 767 только телефон
+        @media screen and (max-width: 767px) {
+            margin-bottom: 60px;
+        }
+    
+    
+        // от 768 до 1199 только планшет
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin-right: 89px;
+        }
+
     }
 
     &__heading {
@@ -81,26 +113,28 @@
         background-color: $accent-color;
         }
     }
+
 }
 
+.address-block {
 
-// @media screen and (min-width: 480px) {
-//     .footer {
-//         width: 480px;
-//     }
-// }
+    // до 767 только телефон
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
 
-// @media screen and (min-width: 768px) {
-//     .footer {
-//         width: 768px;
-//     }
-// }
 
-// @media screen and (min-width: 1140px) {
-//     .footer{
-//         width: 1140px;
-//     }
-// }
+    // от 768 до 1199 только планшет
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: 76px;
+    }
+
+
+    // от 1200 только пк
+    @media screen and (min-width: 1200px) {
+        margin-right: 75px;
+    }
+}
 
 /* Ссылки блока footer */
 
