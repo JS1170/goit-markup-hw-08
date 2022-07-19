@@ -13,4 +13,3 @@
     mobileMenuRef.classList.toggle("is-open");
   });
 })();
-Footer
