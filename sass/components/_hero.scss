@@ -2,7 +2,6 @@
 
         margin-left: auto;
         margin-right: auto;
-
         text-align: center;
         background-color: $footer-background-color;
         background-image: linear-gradient(to right,
@@ -19,7 +18,7 @@
                 background-image: linear-gradient(to right,
                                 rgba(47, 48, 58, 0.4),
                                 rgba(47, 48, 58, 0.4)),
-                        url('../images/hero.jpeg');
+                        url('../images/hero-mobile.jpg');
 
                 @media (min-device-pixel-ratio: 2),
                 (-webkit-min-device-pixel-ratio: 2),
@@ -28,7 +27,7 @@
                         background-image: linear-gradient(to right,
                                         rgba(47, 48, 58, 0.4),
                                         rgba(47, 48, 58, 0.4)),
-                                url('../images/hero.jpeg');
+                                url('../images/hero-mobile@2x.jpg');
                 }
         }
 
@@ -38,7 +37,7 @@
                 background-image: linear-gradient(to right,
                                 rgba(47, 48, 58, 0.4),
                                 rgba(47, 48, 58, 0.4)),
-                        url('../images/hero.jpeg');
+                        url('../images/hero-tablet.jpg');
 
                 @media (min-device-pixel-ratio: 2),
                 (-webkit-min-device-pixel-ratio: 2),
@@ -47,7 +46,7 @@
                         background-image: linear-gradient(to right,
                                         rgba(47, 48, 58, 0.4),
                                         rgba(47, 48, 58, 0.4)),
-                                url('../images/hero.jpeg');
+                                url('../images/hero-tablet@2x.jpg');
                 }
         }
 
@@ -66,7 +65,7 @@
                 background-image: linear-gradient(to right,
                                 rgba(47, 48, 58, 0.4),
                                 rgba(47, 48, 58, 0.4)),
-                        url('../images/hero.jpeg');
+                        url('../images/hero-pc.jpg');
 
                 @media (min-device-pixel-ratio: 2),
                 (-webkit-min-device-pixel-ratio: 2),
@@ -75,7 +74,7 @@
                         background-image: linear-gradient(to right,
                                         rgba(47, 48, 58, 0.4),
                                         rgba(47, 48, 58, 0.4)),
-                                url('../images/hero.jpeg');
+                                url('../images/hero-pc@2x.jpg');
                 }
         }
 
@@ -109,54 +108,26 @@
         }
 
         // ------------- hero__btn
-        // &__btn {
+        &__btn {
 
-        //         padding: 10px 32px;
-        //         min-width: 200px;
-        //         text-align: center;
+                padding: 10px 32px;
+                min-width: 200px;
+                text-align: center;
 
-        //         font-family: inherit;
-        //         font-weight: 700;
-        //         font-size: 16px;
-        //         line-height: 1.88;
-        //         letter-spacing: 0.06em;
-        //         border: 1px solid transparent;
-        //         border-radius: 4px;
+                font-family: inherit;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 1.88;
+                letter-spacing: 0.06em;
+                border: 1px solid transparent;
+                border-radius: 4px;
 
-        //         color: $white-text-color;
-        //         background-color: $accent-color;
+                color: $white-text-color;
+                background-color: $accent-color;
 
-        //         cursor: pointer;
+                cursor: pointer;
 
-        // }
+        }
 
 
 }
-
-// padding-top: 200px;
-// padding-bottom: 200px;
-// text-align: center;
-// background-color: var(--footer-background-color);
-// background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpeg);
-// background-size: cover;
-// max-width: 1600px;
-// background-repeat: no-repeat;
-// background-attachment: scroll;
-// margin-left: auto;
-// margin-right: auto;
-// background-position: center;
-
-// &__title {
-//         margin-top: 0;
-//         margin-bottom: 30px;
-//         margin-left: auto;
-//         margin-right: auto;
-//         width: 696px;
-//         font-weight: 900;
-//         font-size: 44px;
-//         line-height: 1.36;
-//         text-align: center;
-//         letter-spacing: 0.06em;
-//         text-transform: uppercase;
-//         color: $white-text-color;
-// }
