@@ -36,15 +36,19 @@
   }
 
   &__links {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     text-decoration: none;
     overflow: hidden;
     transition: box-shadow 250ms $timing-function;
   }
 
   &__card {
+    
     position: relative;
     overflow: hidden;
+
   }
 
   &__img {
@@ -52,6 +56,7 @@
   }
 
   &__text {
+    flex-grow: 1;
     padding: 20px 24px 20px 24px;
     border-right: 1px solid $secondary-border-color;
     border-left: 1px solid $secondary-border-color;
