@@ -418,6 +418,7 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 2;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1501,7 +1502,6 @@ li {
     justify-content: flex-start;
     flex-wrap: wrap;
     row-gap: 15px;
-    column-gap: 8px;
     margin-bottom: 40px;
   }
 }
@@ -1509,7 +1509,6 @@ li {
   .filters__box {
     display: flex;
     justify-content: center;
-    gap: 8px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
